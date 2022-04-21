@@ -15,3 +15,17 @@
         register_nav_menu('header', 'Меню в шапке');
         register_nav_menu('footer', 'Меню для подвала');
     });
+
+    add_action('widgets_init', function(){        
+        register_sidebar([
+            'name'          => 'Боковая колонка',
+            'id'            => "sidebar-post-single",
+            'description'   => 'Выводится только на странице одного поста',
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</div>\n",
+            'before_title'  => '<div class="h3">',
+            'after_title'   => "</div>\n",
+            'before_sidebar' => '', // WP 5.6
+            'after_sidebar'  => '', // WP 5.6
+        ]);
+    });
