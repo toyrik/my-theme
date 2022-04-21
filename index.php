@@ -20,7 +20,9 @@
     <main>
         <div class="container">
             <?php if(is_single()) : ?>
-                1234
+                <?php the_post() ?>
+                <h3><?php the_title() ?></h3>
+                <div><?php the_content() ?></div>
             <?php else:  ?>
                 <div class="row">
                     <?php while(have_posts()) :
