@@ -7,7 +7,7 @@
                 ?>
             <div class="col col-4">
                 <h3><?php the_title() ?></h3>
-                <a href="<?php echo get_permalink() ?>">Далее</a>
+                <a href="<?php the_permalink() ?>">Далее</a>
             </div>
             <?php endwhile; ?>
         </div>
