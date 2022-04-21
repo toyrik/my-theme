@@ -6,6 +6,8 @@
         <?php the_date('j F Y') ?>
         <h3><?php the_title() ?></h3>
         <div><?php the_content() ?></div>
+        <div><?php the_tags() ?></div>
+
         </div>        
     </div>
 </main>
