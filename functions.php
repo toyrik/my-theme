@@ -12,4 +12,6 @@
     
     add_action('after_setup_theme', function(){
         add_theme_support('post-thumbnails');
+        register_nav_menu('header', 'Меню в шапке');
+        register_nav_menu('footer', 'Меню для подвала');
     });

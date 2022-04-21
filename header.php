@@ -18,7 +18,11 @@
         <div class="container">
             <div class="alert alert-success"><?php bloginfo('name')?></div>
             <div><?php bloginfo('description')?></div>
-            Шапка
+            <?php wp_nav_menu([
+                'theme_location' => 'header',
+                'container' => false,
+                'menu_class' => 'menu menu-header'
+            ]); ?>
             <hr>
         </div>
     </header>
