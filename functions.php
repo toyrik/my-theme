@@ -29,3 +29,24 @@
             'after_sidebar'  => '', // WP 5.6
         ]);
     });
+    add_action('widgets_init', function(){        
+        register_sidebar([
+            'name'          => 'Левая колонка подвала',
+            'id'            => "sidebar-footer-left",
+            'description'   => 'Выводится слева в подвале',
+        ]);
+    });
+    add_action('widgets_init', function(){        
+        register_sidebar([
+            'name'          => 'Центральная колонка подвала',
+            'id'            => "sidebar-footer-center",
+            'description'   => 'Выводится по центру в подвале',
+        ]);
+    });
+    add_action('widgets_init', function(){        
+        register_sidebar([
+            'name'          => 'Правая колонка подвала',
+            'id'            => "sidebar-footer-right",
+            'description'   => 'Выводится справа в подвале',
+        ]);
+    });
