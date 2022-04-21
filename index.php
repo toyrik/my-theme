@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="alert alert-success"><?php bloginfo()?></div>
+            <div class="alert alert-success"><?php bloginfo('name')?></div>
             <div><?php bloginfo('description')?></div>
             Шапка
             <hr>
@@ -19,16 +19,20 @@
     </header>
     <main>
         <div class="container">
-            <div class="row">
-                <?php while(have_posts()) :
-                    the_post();
-                    ?>
-                <div class="col col-4">
-                    <h3><?php the_title() ?></h3>
-                    <a href="<?php echo get_permalink() ?>">Далее</a>
+            <?php if(is_single()) : ?>
+                1234
+            <?php else:  ?>
+                <div class="row">
+                    <?php while(have_posts()) :
+                        the_post();
+                        ?>
+                    <div class="col col-4">
+                        <h3><?php the_title() ?></h3>
+                        <a href="<?php echo get_permalink() ?>">Далее</a>
+                    </div>
+                    <?php endwhile; ?>
                 </div>
-                <?php endwhile; ?>
-            </div>
+            <?php endif; ?>
         </div>
     </main>
     <footer>
