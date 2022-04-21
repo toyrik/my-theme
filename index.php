@@ -19,22 +19,16 @@
     </header>
     <main>
         <div class="container">
-            <?php if(is_single()) : ?>
-                <?php the_post() ?>
-                <h3><?php the_title() ?></h3>
-                <div><?php the_content() ?></div>
-            <?php else:  ?>
-                <div class="row">
-                    <?php while(have_posts()) :
-                        the_post();
-                        ?>
-                    <div class="col col-4">
-                        <h3><?php the_title() ?></h3>
-                        <a href="<?php echo get_permalink() ?>">Далее</a>
-                    </div>
-                    <?php endwhile; ?>
+            <div class="row">
+                <?php while(have_posts()) :
+                    the_post();
+                    ?>
+                <div class="col col-4">
+                    <h3><?php the_title() ?></h3>
+                    <a href="<?php echo get_permalink() ?>">Далее</a>
                 </div>
-            <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
         </div>
     </main>
     <footer>
