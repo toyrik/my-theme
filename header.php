@@ -11,7 +11,6 @@
             <?php the_title() ?>
         <?php endif; ?>
     </title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri()?>">
     <?php wp_head() ?>
 </head>
 <body>
