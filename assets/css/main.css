@@ -7,11 +7,105 @@ body {
     justify-content: end;
 }
 
-.menu-header li{
+.menu-header li {
     list-style: none;
     margin: 0 5px;
 }
 
 .menu-header .current_page_item a {
     color: red;
+}
+
+
+.logo {
+    padding: 18px 0;
+    width: 28%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logo a {
+    display: block;
+}
+
+.logo a,
+.logo p {
+    color: #777;
+}
+
+.logo img {
+    max-height: 8rem;
+    margin: 0 auto;
+    width: auto;
+}
+
+.tagline {
+    font-size: 13px;
+    color: #828181;
+    display: block;
+    letter-spacing: 1px;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: inside none disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 3em 0 3em -0.8em;
+	width: calc(100% + 1.6em);
+}
+
+.gallery-item {
+	margin: 0.8em 0;
+	padding: 0 0.8em;
+	width: 100%;
+}
+
+.gallery-caption {
+	display: block;
+	margin-top: 0.8em;
 }

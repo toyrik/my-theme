@@ -11,6 +11,36 @@
     });
     
     add_action('after_setup_theme', function(){
+        // Альтернативный логотип.
+        $logo_width  = 120;
+        $logo_height = 90;
+
+        // Настройки для ретины.
+        if ( get_theme_mod( 'retina_logo', false ) ) {
+            $logo_width  = floor( $logo_width * 2 );
+            $logo_height = floor( $logo_height * 2 );
+        }
+
+        add_theme_support( 'html5', [
+            'comment-list',
+            'comment-form',
+            'search-form',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+
+        ]);
+
+        add_theme_support(
+            'custom-logo',
+            array(
+                'height'      => $logo_height,
+                'width'       => $logo_width,
+                'flex-height' => true,
+                'flex-width'  => true,
+            )
+        );
         add_theme_support('post-thumbnails');
         register_nav_menu('header', 'Меню в шапке');
         register_nav_menu('footer', 'Меню для подвала');
